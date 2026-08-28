@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=" yourChoice('Head');
+    ">Head</button>
+    <button onclick=" yourChoice('Tail');">Tail</button>
+    <button onclick="resetScore();">Reset</button>
+
+
+    <script>
+        let Score = JSON.parse(localStorage.getItem('GameScore')) || {
+            wins : 0,
+            loses : 0
+        }
+
+        function randomNoGenerator(){
+            let randomNumber = Math.floor(Math.random() * 2 +1);
+            if(randomNumber === 1)
+            {
+                return 'Head';
+            }
+            return 'Tail';
+        }
+
+        function resetScore()
+        {
+            Score.wins = 0;
+            Score.loses = 0;
+            localStorage.removeItem('GameScore');
+            alert('The Score Has Been Reset');
+        }
+
+
+
+
+
+
+        let result = '';
+
+        function yourChoice(choice)
+        {
+            if(choice === randomNoGenerator()){
+                result = 'You Win';
+                Score.wins++;
+            }
+            else {
+                result = 'You Lose';
+                Score.loses++;
+
+            }
+            localStorage.setItem('GameScore', JSON.stringify(Score));
+            alert(`${result} and the Score is [ wins:${Score.wins} ,loses: ${Score.loses}]`);
+        }
+        
+
+    </script>
+    
+</body>
+</html>

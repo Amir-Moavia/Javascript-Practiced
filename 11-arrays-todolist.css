@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.todo-input-grid,
+.todoContainer {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.inputtext,
+.dateInTodo {
+    padding: 6px;
+    font-size: 15px;
+}
+
+.addingbtn1 {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+
+.removeBtn {
+    background-color: darkred;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 8px 15px;
+}

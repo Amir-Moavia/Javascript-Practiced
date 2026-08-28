@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Project</title>
+    <link rel="stylesheet" href="09-DOM_CSS.css">
+</head>
+<body>
+    <p> ============= Youtube Subscribe Button ==============</p>
+    <p>Youtube Subscribe Button</p>
+    <button class="YoutubeBtn" onclick=" SubscribeButton();
+     ">Subscribe</button>
+
+
+    <p> ============== Amazon Shopping Calculator ============== </p>
+
+     <p>Amazon Shipping Calculator</p>
+     <p>Order Under $40 = +$10 For Shipping</p>
+     <p>Order Over $40 = Free Shipping</p>
+     <input class="Inputcost" type="text" placeholder="Product Cost">
+     <button class="calbtn" onclick="CalculateProductCost();">Calculate</button>
+     <p class="TotalCost"></p>
+
+
+     <p>============= Event Listner =================</p>
+     <button id="myButton">Click Me</button>
+
+     <button id="helloButton">Click To Chnage the Text</button>
+     <p id="message">Original Text</p>
+
+            
+
+    <script>
+        function SubscribeButton()
+        {
+            let BtnColor = "black";
+            let buttonElement = document.querySelector('.YoutubeBtn');
+            if(buttonElement.innerHTML === 'Subscribe')
+            {
+                buttonElement.innerHTML = 'Subscribed';
+                if(BtnColor === "black"){
+                    BtnColor = "white";
+                    document.querySelector('.YoutubeBtn').style.backgroundColor = "white";
+                    document.querySelector('.YoutubeBtn').style.color = "black";
+                }
+                
+                
+            }
+            else {
+                BtnColor = "black";
+                document.querySelector('.YoutubeBtn').style.backgroundColor = "black";
+                document.querySelector('.YoutubeBtn').style.color = "white";
+                buttonElement.innerHTML = 'Subscribe';
+         }
+        }
+
+
+        // ================================ // 
+
+        let InputProductCost = document.querySelector('.Inputcost');
+        let TotalProductCost = document.querySelector('.TotalCost');
+
+
+        function CalculateProductCost()
+        {
+            let cost = Number(InputProductCost.value);
+            if(InputProductCost.value === ''){
+                TotalProductCost.innerHTML = 'Please Enter A Valid Amount';
+                return;
+            }
+            else if (cost < 40){
+                TotalProductCost.innerHTML = `$${cost + 10}`;
+            }
+            else{
+                TotalProductCost.innerHTML = `$${cost}`;
+            }
+            
+        }
+
+
+        // ===================================== //
+
+        const button = document.getElementById("myButton");
+
+
+
+        button.addEventListener("click", function() {
+
+            console.log("Button was clicked");
+
+        });
+
+        const btn = document.getElementById("helloButton");
+        const message = document.getElementById("message");
+
+        btn.addEventListener("click", function() {
+            message.textContent = "The button was clicked!";
+        });
+    
+    </script>
+</body>
+</html>

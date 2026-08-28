@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops and arrays Problem</title>
+    
+</head>
+<body>
+    <script>
+        // =============== Buzz Fizz Problem ================== //
+        let fizz = 'Fizz';
+        let buzz = 'Buzz';
+        for(let i=1; i<=20; i++)
+        {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log(fizz + buzz);    
+            }
+            else if (i % 5 === 0) {
+                console.log(buzz);
+            }
+            else if (i % 3 === 0) {
+                console.log(fizz);
+            }
+            else{
+                console.log(i);
+            }
+        }
+        // ============= finding color index ================//
+        function findIndex(array_input,word)
+        {
+            for (let i = 0; i < array_input.length; i++) {
+                if (array_input[i]=== word ) {
+                    return i;
+                    break;
+                }
+      
+            } 
+            return -1;
+        }
+
+       console.log(findIndex(['green','blue','red', 'blue'], 'red')); 
+       
+       // ============== Removing Duplicates ==============//
+       
+       function unique(input)
+        {
+           const uniqueitems = [];
+           for (let i=0; i<input.length; i++)
+           {
+                if (!uniqueitems.includes(input[i])) {
+                    uniqueitems.push(input[i]);
+                }
+           }
+           return uniqueitems;
+        }
+            
+        console.log(unique(['green','green','blue','red', 'blue']));
+    </script>
+    
+</body>
+</html>

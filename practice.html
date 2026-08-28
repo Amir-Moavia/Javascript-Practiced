@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            background-color: #fff;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        td {
+            padding: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Page</h1>
+    <table border="1"align="center" cellpadding="10" cellspacing="0">
+        <form>
+            <tr>
+                <td><label for="name">Student Name:</label></td>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <td><label for="fatherName">Father's Name:</label></td>
+                <td><input type="text" id="fatherName" name="fatherName"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td>
+                    <select id="age" name="age">
+                        <option value="0-18">0-18</option>
+                        <option value="19-35">19-35</option>
+                        <option value="36-60">36-60</option>
+                        <option value="60+">60+</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for= "country">Country</label></td>
+                <td>
+                    <select id = "country" name = "country">
+                        <option value = "Pakistan">Pakistan</option>
+                        <option value = "canada">Canada</option>
+                        <option value = "uk">UK</option>
+                        <option value = "australia">Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone:</label></td>
+                <td><input type="tel" id="phone" name="phone"></td>
+            </tr>
+             <tr>
+                <td>Address</td>
+                <td><textarea name = "address" rows = "4" cols = "50"></textarea></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" id="reset" name="reset">
+                    <input onclick="alert('Form Submited Successfully');" type="submit" id="submit" name="submit" value="Submit">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        
+    </script>
+</body>
+</html>

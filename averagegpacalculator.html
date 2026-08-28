@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let noofsemesters = Number(prompt('Enter The Number Of Semesters Do You studied'));
+        let array = [];
+        let sumofgpa = 0;
+        for(let i = 1; i <= noofsemesters;i++){
+            array[i] = Number(prompt(`Enter ${i} semester GPA`));
+            sumofgpa = sumofgpa + array[i];
+        }
+
+        for(let j = 1; j<= noofsemesters; j++){
+            console.log(`Check ${j} semester GPA = ${array[j]}`);
+        }
+        console.log(`The Avg of GPA is ${sumofgpa/noofsemesters}`);
+        
+    </script>
+</body>
+</html>

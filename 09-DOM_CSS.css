@@ -1,0 +1,48 @@
+body {
+    background-color: bisque;
+}
+
+.YoutubeBtn {
+    width: 100px;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    
+    
+}
+
+.Inputcost {
+    width: 200px;
+    height: 30px;
+
+
+}
+.calbtn {
+    
+    width: 75px;
+    height: 35px;
+    background-color: rgb(56, 84, 13);
+    border: none;
+    color: white;
+}
+
+#helloButton {
+    width: 200px;
+    height: 35px;
+    background-color: rgb(56, 84, 13);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+#myButton {
+    width: 90px;
+    height: 35px;
+    background-color: rgb(56, 84, 13);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+

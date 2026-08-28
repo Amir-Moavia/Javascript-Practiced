@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Toggle</title>
+</head>
+<body>
+    <button class="Clickmebtn">Click Me</button>
+    <div id="box">
+        Move mouse here
+    </div>
+
+    <script>
+        const button1 = document.querySelector('.Clickmebtn');
+        
+
+        let CurrentColor = "Dark";
+        
+        button1.addEventListener("click", function() {
+           
+            if (CurrentColor === "Dark") {
+                CurrentColor = "Light";
+                document.querySelector('body').style.backgroundColor = "white";
+                document.querySelector('#box').style.color = "black";
+                console.log(CurrentColor);
+                
+                
+                
+            } else {
+                CurrentColor = "Dark";
+                document.querySelector('body').style.backgroundColor = "black";
+                document.querySelector('#box').style.color = "white";
+                console.log(CurrentColor);
+                
+            }
+        });
+
+
+        // =============================== //
+        const box = document.getElementById("box");
+        let DivColor = "orange";
+       // document.querySelector('#box').style.backgroundColor = "orange";
+
+        box.addEventListener("mouseover", function() {
+            console.log("Mouse is over the box");
+            if(DivColor === "orange")
+            {
+                DivColor = "blue";
+                document.querySelector('#box').style.backgroundColor = "blue";
+                
+            }
+            else {
+                DivColor = "orange";
+                document.querySelector('#box').style.backgroundColor = "orange";
+                
+            }
+          
+        });
+
+    </script>
+</body>
+</html>

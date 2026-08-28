@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title_edit">12 Exercise</title>
+</head>
+<body>
+    <button onclick="finishing();" class="changingbtn">Start</button><hr>
+    <button onclick="addToCart();" class="addToCart">Add To Cart</button>
+    <p class="addToCart_para"></p><hr>
+    <button onclick="addToCart2();" class="addToCart2">Add To Cart</button>
+    <p class="addToCart_para2"></p><hr>
+    <button class="addBtn" onclick="addMessage();">Add</button>
+    <button class="removeBtn" onclick="removeMessage();">Remove</button>
+    <script>
+
+        function addMessage()
+        {
+
+            number++;
+            setTimeout(function(){
+            document.querySelector('.title_edit').innerHTML = `${number} messages recieved`;
+            },2000);
+        }
+
+        
+         function removeMessage()
+        {
+            if (number === 0)
+            {
+                number = 0;
+            }
+            else{
+                number--;
+                setTimeout(function(){
+                document.querySelector('.title_edit').innerHTML = `${number} messages recieved`;
+                },2000);
+            }
+        }
+
+// ============================================== //
+        let add = function ()
+        {
+            console.log('12b');
+        }
+
+     
+// =============================================== //
+
+        function runTwice(fun)
+        {
+            fun();
+            fun();
+
+        }
+        runTwice(add);
+// ================================================ //
+        function finishing() {
+        const buttonElement = document.querySelector('.changingbtn');
+        buttonElement.innerHTML = 'Loading...';
+
+        
+        setTimeout(function() {
+            buttonElement.innerHTML = 'Finished!';
+        }, 1000);
+    }
+// ================================================ //
+        function addToCart()
+        {  
+            setTimeout(function(){
+            document.querySelector('.addToCart_para').innerHTML = 'Added';
+            },0);
+            
+        }
+
+// ============================================== //
+        let timeoutID;
+        function addToCart2() {
+            const messageElement = document.querySelector('.addToCart_para2');
+            messageElement.innerHTML = 'Added';
+
+            clearTimeout(timeoutID);
+            timeoutID = setTimeout(function(){
+                messageElement.innerHTML = '';
+            }, 2000);
+        }
+
+// =============================================== //
+        let number = 2;
+        setTimeout(function(){
+            document.querySelector('.title_edit').innerHTML = `${number} messages recieved`;
+        },2000);
+ // =============================================== //
+        
+
+
+    </script>
+
+    
+</body>
+</html>

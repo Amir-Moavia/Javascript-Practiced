@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+
+        const xhrreq = new XMLHttpRequest();
+        xhrreq.open('GET' , requestUrl);
+        xhrreq.onreadystatechange = function(){
+            console.log(xhrreq.readyState);
+            if (xhrreq.readyState === 4) {
+                const Data = JSON.parse(this.responseText);
+                console.log(Data);
+                
+                const divContainer = document.createElement('div');
+                divContainer.style.width = '150px';
+                divContainer.style.height = '150px';
+                divContainer.style.backgroundColor = 'red';
+                divContainer.style.borderRadius = '5px'
+
+                const Body = document.querySelector('body');
+                Body.appendChild(divContainer);
+
+                const Image = document.createElement('img');
+
+
+                Image.src = Data.avatar_url;
+                Image.style.width = '100%';
+                Image.style.height = '100%';
+                Image.style.borderRadius = '5px';
+
+
+                divContainer.appendChild(Image);
+
+                const Para = document.createElement('p');
+                Para.innerHTML = `Followers : ${Data.followers}`;
+ 
+                Body.appendChild(Para);
+            }
+        }
+        xhrreq.send();
+
+    </script>
+    
+</body>
+</html>
